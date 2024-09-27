@@ -1,7 +1,7 @@
 <?php
 class Reservation{
     public $con;
-    private $Table = " reservation";
+    private $table = "reservation";
 
     public $reservationId ;
     public $reservationType;
@@ -46,11 +46,31 @@ class Reservation{
 
         $exe = $this->con->query($sql);
         if($exe){
-            header("Location: Reservation.php?success");
+            header("Location: operatorConsole.php?success");
         }else{
             echo $this->con->error;
         }
 
+    }
+
+
+    public function getAllReservation(){
+        $sql = "SELECT * from $this->table where active = '1'";
+        $exe = $this->con->query($sql);
+        if($exe){
+            $records = [];
+            while($row = $exe->fetch_assoc()){
+                $records[] = $row;
+            }
+            return $records;
+        }
+    }
+
+    public function getReservationByID($ID){
+        $sql = "SELECT * FROM $this->table where reservationID = '$ID' and active = '1' ";
+        $exe = $this->con->query($sql);
+        $row = $exe->fetch_assoc();
+        return $row;
     }
 
 
