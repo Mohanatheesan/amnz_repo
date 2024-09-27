@@ -25,7 +25,7 @@
         <div class="col-md-12">
 
           <?php
-          if(isset($_POST['btnSubmitTrip'])){cd
+          if(isset($_POST['btnSubmitTrip'])){
 
             //var_dump($_POST);
             //exit();
