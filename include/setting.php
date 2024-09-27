@@ -18,6 +18,7 @@
 	require "Classes/Database.php";
 	require "Classes/Users.php";
 	require "Classes/Drivers.php";
+	require "Classes/Reservation.php";
 
 	require "Classes/MailerAPI.php";
 	require "Classes/SmsAPI.php";
