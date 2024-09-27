@@ -27,7 +27,7 @@
           <?php
           if(isset($_POST['btnSubmitTrip'])){cd
 
-            var_dump($_POST);
+            //var_dump($_POST);
             //exit();
             $reservation = new Reservation();
 
