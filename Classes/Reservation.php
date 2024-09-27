@@ -1,7 +1,7 @@
 <?php
 class Reservation{
     public $con;
-    private $Table = " reservation";
+    private $table = "reservation";
 
     public $reservationId ;
     public $reservationType;
@@ -33,24 +33,44 @@ class Reservation{
         $this->vehicleType = htmlspecialchars($data['vehicleType']);
         $this->pickupLocation = htmlspecialchars($data['pickupLocation']);
         $this->dropoffLocation = htmlspecialchars($data['dropoffLocation']);
-        $this->reservedDateTime ="";
+        $this->reservedDateTime = date("Y-m-d H:i:s");
         $this->scheduledDateTime = htmlspecialchars($data['scheduledDateTime']);
         $this->amount = htmlspecialchars($data['amount']);
         $this->note = htmlspecialchars($data['note']);
         $this->status = "Pending";
         $this->active = "1";
 
-         $sql = "INSERT INTO `reservation`(`reservationID`, `reservationType`, `reservedBy`, `passengerName`,`passengerPhone`,`passengerNIC`,`vehicleType`,`pickupLocation`, `dropoffLocation`, `reservedDateTime`, `scheduledDateTime`, `amount`, `note`, `status`, `active`) VALUES (null,'$this->reservationType','$this->reservedBy','$this->passengerName','$this->passengerPhone','$this->passengerNIC','$this->vehicleType','$this->pickupLocation','$this->dropoffLocation','$this->reservedDateTime','$this->scheduledDateTime','$this->amount','$this->note','$this->status','$this->active')";
+         $sql = "INSERT INTO `reservation`(`reservationID`, `reservationType`, `reservedBy`, `passengerName`,`passengerPhone`,`passengerNIC`,`vehicleType`,`pickupLocation`, `dropoffLocation`, `reservedDateTime`, `scheduledDateTime`, `amount`, `note`, `status`, `active`) VALUES (null,'$this->reservationType','$this->reservedBy','$this->passengerName','$this->passengerPhone','$this->passengerNIC','$this->vehicleType','$this->pickupLocation','$this->dropoffLocation','$this->reservedDateTime','$this->scheduledDateTime', '$this->amount','$this->note','$this->status','$this->active')";
         
 
 
         $exe = $this->con->query($sql);
         if($exe){
-            header("Location: Reservation.php?success");
+            header("Location: operatorConsole.php?success");
         }else{
             echo $this->con->error;
         }
 
+    }
+
+
+    public function getAllReservation(){
+        $sql = "SELECT * from $this->table where active = '1'";
+        $exe = $this->con->query($sql);
+        if($exe){
+            $records = [];
+            while($row = $exe->fetch_assoc()){
+                $records[] = $row;
+            }
+            return $records;
+        }
+    }
+
+    public function getReservationByID($ID){
+        $sql = "SELECT * FROM $this->table where reservationID = '$ID' and active = '1' ";
+        $exe = $this->con->query($sql);
+        $row = $exe->fetch_assoc();
+        return $row;
     }
 
 
