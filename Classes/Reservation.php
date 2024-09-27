@@ -33,14 +33,14 @@ class Reservation{
         $this->vehicleType = htmlspecialchars($data['vehicleType']);
         $this->pickupLocation = htmlspecialchars($data['pickupLocation']);
         $this->dropoffLocation = htmlspecialchars($data['dropoffLocation']);
-        $this->reservedDateTime ="";
+        $this->reservedDateTime = date("Y-m-d H:i:s");
         $this->scheduledDateTime = htmlspecialchars($data['scheduledDateTime']);
         $this->amount = htmlspecialchars($data['amount']);
         $this->note = htmlspecialchars($data['note']);
         $this->status = "Pending";
         $this->active = "1";
 
-         $sql = "INSERT INTO `reservation`(`reservationID`, `reservationType`, `reservedBy`, `passengerName`,`passengerPhone`,`passengerNIC`,`vehicleType`,`pickupLocation`, `dropoffLocation`, `reservedDateTime`, `scheduledDateTime`, `amount`, `note`, `status`, `active`) VALUES (null,'$this->reservationType','$this->reservedBy','$this->passengerName','$this->passengerPhone','$this->passengerNIC','$this->vehicleType','$this->pickupLocation','$this->dropoffLocation','$this->reservedDateTime','$this->scheduledDateTime','$this->amount','$this->note','$this->status','$this->active')";
+         $sql = "INSERT INTO `reservation`(`reservationID`, `reservationType`, `reservedBy`, `passengerName`,`passengerPhone`,`passengerNIC`,`vehicleType`,`pickupLocation`, `dropoffLocation`, `reservedDateTime`, `scheduledDateTime`, `amount`, `note`, `status`, `active`) VALUES (null,'$this->reservationType','$this->reservedBy','$this->passengerName','$this->passengerPhone','$this->passengerNIC','$this->vehicleType','$this->pickupLocation','$this->dropoffLocation','$this->reservedDateTime','$this->scheduledDateTime', '$this->amount','$this->note','$this->status','$this->active')";
         
 
 
