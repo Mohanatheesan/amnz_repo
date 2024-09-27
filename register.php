@@ -36,7 +36,7 @@
               $user->register($_POST);
               $user->getUserByEmail($user->useremail);
               
-              $driver = new Driver();
+              $driver = new Drivers();
               $driver->registerDriver($_POST, $user->userID);
             }
           }
@@ -124,7 +124,7 @@
                       <input type="text" name="address" class="form-control" placeholder="Address " required>
                     </div>
                     <div class="form-group">
-                      <input type="text" name="licenseNO" class="form-control" placeholder="License No " required>
+                      <input type="text" name="licenseNo" class="form-control" placeholder="License No " required>
                     </div>
                     <div class="form-group">
                       <input type="date" name="licenseExpireDate" class="form-control" placeholder="License Exprire Date " required>

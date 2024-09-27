@@ -1,5 +1,5 @@
 <?php
-class Driver{
+class Drivers{
 	public $con;
 	private $table = "drivers";
 

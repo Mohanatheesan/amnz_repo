@@ -249,7 +249,23 @@ class Users {
 			$this->getUserByEmail($useremail);
 			//if(password_hash($password, PASSWORD_DEFAULT) == $this->password){
 			if(password_verify($password, $this->password)){
-				header("Location: login.php?001");
+				$_SESSION['userID'] = $this->userID;
+				$_SESSION['firstname'] = $this->firstname;
+				$_SESSION['lastname'] = $this->lastname;
+				$_SESSION['useremail'] = $this->useremail;
+				$_SESSION['userphone'] = $this->userphone;
+				$_SESSION['token'] = $this->token;
+				$_SESSION['type'] = $this->type;
+
+				if($this->type == '1'){
+					header("Location: login.php?001");
+				}elseif($this->type == '2'){
+					header("Location: login.php?001");
+				}elseif($this->type == '3'){
+					header("Location: operatorConsole.php");
+				}elseif($this->type == '4'){
+					header("Location: adminConsole.php");
+				}
 			}else{
 				?>
 				<div class="alert alert-danger" role="alert">
