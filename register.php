@@ -30,8 +30,6 @@
               $user = new Users();
               $user->register($_POST);
             }elseif($_POST['type'] == "Driver"){
-              //echo "<script>alert('he')</script>";
-              //var_dump($_POST);
               $user = new Users();
               $user->register($_POST);
               $user->getUserByEmail($user->useremail);
@@ -105,6 +103,9 @@
                   ?>
                   <form action="register.php" method="post" id="frmRegisterD">
                     <input type="hidden" value="Driver" name="type">
+                    <input type="hidden" name="currentLat" id="currentLat">
+                    <input type="hidden" name="currentLng" id="currentLng">
+
                     <div class="form-group">
                       <input type="text" name="firstname" class="form-control" placeholder="Firstname " required>
                     </div>
@@ -137,7 +138,6 @@
                         <option value="Van">Van</option>
                       </select>
                     </div>
-
                     <div class="form-group">
                       <input type="text" name="vehicleModel" class="form-control" placeholder="Suzuki Wagan R 2015" required>
                     </div>
@@ -148,9 +148,6 @@
                     <div class="form-group">
                       <input type="text" name="vehicleNo" class="form-control" placeholder="Vehicle No" required>
                     </div>
-
-                    
-
                     <div class="form-group">
                       <button class="form-control btn btn-success" type="submit" name="btnRegister" id="btnRegister">Register</button>
                     </div>
@@ -210,6 +207,23 @@
     $("#btnRegister").on("click", function(){
       $("#frmRegisterD").submit();
     });
+
+
+    function getCurrentLocation(){
+      navigator.geolocation.getCurrentPosition(function (position) {
+          const latitude = position.coords.latitude;
+          const longitude = position.coords.longitude;
+
+          $("#currentLat").val(latitude);
+          $("#currentLng").val(longitude);
+          //alert("done");
+      }, function () {
+          alert('Failed to fetch GPS location.');
+      });
+    }
+
+    getCurrentLocation();
+    setInterval(getCurrentLocation, 60000);
   });
 </script>
 

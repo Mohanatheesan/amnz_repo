@@ -17,17 +17,48 @@
               <li class="nav-item">
                 <a class="nav-link" href="about.php">About </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="why.php">Why Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.php">Blog</a>
-              </li>
+              
             </ul>
             <div class="user_option ">
-              <a href="login.php" class="">
-                Login
-              </a>
+              <?php
+              //echo $_SESSION['userID'];
+              //$_SESSION['firstname'];
+              //$_SESSION['lastname'];
+              //$_SESSION['useremail'];
+              //$_SESSION['userphone'];
+              //$_SESSION['token'];
+              //$_SESSION['type'];
+
+              if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
+
+                if($_SESSION['type'] == '1'){
+                  ?>
+                  <a href="passengerConsole.php" class="" style="margin-right: 10px;">RIDE</a>
+                  <?php
+                }elseif($_SESSION['type'] == '2'){
+                  ?>
+                  <a href="driverConsole.php" class="" style="margin-right: 10px;">DRIVER</a>
+                  <?php
+                }elseif($_SESSION['type'] == '3'){
+                  ?>
+                  <a href="operatorConsole.php" class="" style="margin-right: 10px;">OPERATOR</a>
+                  <?php
+                }elseif($_SESSION['type'] == '4'){
+                  ?>
+                  <a href="adminConsole.php" class="" style="margin-right: 10px;">ADMIN</a>
+                  <?php
+                }
+
+                ?>
+                <a href="logout.php" class="">Logout</a>
+                <?php
+              }else{
+                ?>
+                <a href="login.php" class="">Login</a>
+                <?php
+              }
+              ?>
+              
             </div>
           </div>
         </nav>

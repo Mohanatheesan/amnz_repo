@@ -1,7 +1,6 @@
 <?php
-
 class MailerAPI {
-    private $apiUrl = 'https://businessprintersolutions.com/TheesanMailer/mail.php';
+    private $apiUrl;
 
     // Constructor to initialize the API URL
     public function __construct() {

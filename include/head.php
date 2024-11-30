@@ -22,3 +22,6 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+
+  
+  <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $mapApiKey; ?>&libraries=places,geometry&callback=initMap" async defer></script>

@@ -1,52 +1,31 @@
 <?php
-
 class SmsAPI
 {
     private $apiUrl;
     private $apiKey;
-
     // Constructor to initialize the API URL and API key
     public function __construct()
     {
         $this->apiUrl = 'https://api.textit.biz';
         $this->apiKey = '204bgkd16108edcfadtdc7fadh8267';
     }
-
-    // Function to send SMS
     public function sendSms($to, $text)
     {
-        // Create cURL resource
         $curl = curl_init();
-
-        // Set the request parameters
         $payload = json_encode([
             "to" => $to,
             "text" => $text
         ]);
-
         // Set cURL options
         curl_setopt_array($curl, array(
-            CURLOPT_URL => $this->apiUrl,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_ENCODING => '',
-            CURLOPT_MAXREDIRS => 10,
-            CURLOPT_TIMEOUT => 0,
-            CURLOPT_FOLLOWLOCATION => true,
-            CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-            CURLOPT_CUSTOMREQUEST => 'POST',
-            CURLOPT_POSTFIELDS => $payload,
+            CURLOPT_URL => $this->apiUrl, CURLOPT_RETURNTRANSFER => true, CURLOPT_ENCODING => '', CURLOPT_MAXREDIRS => 10, CURLOPT_TIMEOUT => 0, CURLOPT_FOLLOWLOCATION => true, CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1, CURLOPT_CUSTOMREQUEST => 'POST', CURLOPT_POSTFIELDS => $payload,
             CURLOPT_HTTPHEADER => array(
                 'Content-Type: application/json',
                 'Accept: */*',
                 'X-API-VERSION: v1',
-                'Authorization: Basic ' . $this->apiKey,
-            ),
+                'Authorization: Basic ' . $this->apiKey,),
         ));
-
-        // Execute the request and get the response
         $response = curl_exec($curl);
-
-        // Handle errors, if any
         if (curl_errno($curl)) {
             $error_msg = curl_error($curl);
             curl_close($curl);
@@ -55,11 +34,7 @@ class SmsAPI
                 'message' => 'cURL Error: ' . $error_msg
             ];
         }
-
-        // Close cURL session
         curl_close($curl);
-
-        // Return the response
         return json_decode($response, true);
     }
 }

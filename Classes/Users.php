@@ -63,37 +63,7 @@ class Users {
 	        </div>
 			<?php
 		}else{
-			$sql = "INSERT INTO $this->table (
-				userID, 
-				firstname, 
-				lastname, 
-				useremail, 
-				userphone, 
-				password, 
-				nic, 
-				address, 
-				code, 
-				token, 
-				otp, 
-				lastLogin, 
-				type, 
-				active
-			) VALUES (
-				null, 
-				'$this->firstname', 
-				'$this->lastname', 
-				'$this->useremail', 
-				'$this->userphone', 
-				'$this->password', 
-				'$this->nic', 
-				'$this->address', 
-				'$this->code', 
-				'$this->token', 
-				'$this->otp', 
-				'$this->lastLogin', 
-				'$this->type', 
-				'$this->active'
-			)";
+			$sql = "INSERT INTO $this->table (userID, firstname, lastname, useremail, userphone, password, nic, address, code, token, otp, lastLogin, type, active) VALUES (null, '$this->firstname', '$this->lastname', '$this->useremail', '$this->userphone', '$this->password', '$this->nic', '$this->address', '$this->code', '$this->token', '$this->otp', '$this->lastLogin', '$this->type', '$this->active')";
 
 			$exe = $this->con->query($sql);
 			if($exe){
@@ -125,7 +95,6 @@ class Users {
 				<?php
 			}
 		}
-
 	}
 
 
@@ -244,7 +213,6 @@ class Users {
 	public function Login($data){
 		$useremail = htmlspecialchars($data['useremail']);
 		$password = htmlspecialchars($data['password']);
-
 		if($this->checkUserEmail($useremail)){
 			$this->getUserByEmail($useremail);
 			//if(password_hash($password, PASSWORD_DEFAULT) == $this->password){
@@ -253,14 +221,15 @@ class Users {
 				$_SESSION['firstname'] = $this->firstname;
 				$_SESSION['lastname'] = $this->lastname;
 				$_SESSION['useremail'] = $this->useremail;
+				$_SESSION['nic'] = $this->nic;
 				$_SESSION['userphone'] = $this->userphone;
 				$_SESSION['token'] = $this->token;
 				$_SESSION['type'] = $this->type;
 
 				if($this->type == '1'){
-					header("Location: login.php?001");
+					header("Location: passengerConsole.php");
 				}elseif($this->type == '2'){
-					header("Location: login.php?001");
+					header("Location: driverConsole.php");
 				}elseif($this->type == '3'){
 					header("Location: operatorConsole.php");
 				}elseif($this->type == '4'){

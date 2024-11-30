@@ -19,10 +19,14 @@
 	require "Classes/Users.php";
 	require "Classes/Drivers.php";
 	require "Classes/Reservation.php";
+	require "Classes/Trips.php";
+	require "Classes/Payment.php";
+	require "Classes/Rating.php";
 
 	require "Classes/MailerAPI.php";
 	require "Classes/SmsAPI.php";
 
+	$mapApiKey = "AIzaSyBmDezClKTkm23mAuJrbM-w1_dFz0KYaP8";
 
 	// Include PHPMailer classes
 	use PHPMailer\PHPMailer\PHPMailer;

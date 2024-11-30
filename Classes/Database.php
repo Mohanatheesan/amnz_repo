@@ -1,6 +1,5 @@
 <?php
 class Database{
-	//u857321886_amnz_db
 	private $host = "localhost";
 	private $user = "root";
 	private $pass = "";
@@ -24,4 +23,4 @@ class Database{
     }
 }
 
-?>
+?>	

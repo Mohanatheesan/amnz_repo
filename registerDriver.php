@@ -73,6 +73,7 @@
                   <form action="" method="post" id="frmRegisterD">
                     <input type="hidden" value="Driver" name="type">
                     <div class="form-group">
+                      
                       <input type="text" name="firstname" class="form-control" placeholder="Firstname " required>
                     </div>
                     <div class="form-group">
@@ -177,6 +178,8 @@
     $("#btnRegisterDriver").on("click", function(){
       $("#frmRegisterD").submit();
     });
+
+    
   });
 </script>
 

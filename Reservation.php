@@ -79,6 +79,7 @@
                   <div class="form-group">
                     <label for="amount" class="label">Amount</label>
                     <input type="text" class="form-control"  id ="amount" name='amount' placeholder="Enter the Trip amount" required>
+                    <input type="text" class="form-control"  id ="distance" name='distance' placeholder="Enter the Trip distance" required>
                   </div>
 
                   </div>

@@ -1,6 +1,20 @@
 
 <?php require "include/setting.php"; ?>
 
+<?php
+if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
+  if($_SESSION['type'] == '1'){
+    header("Location: passengerConsole.php");
+  }elseif($_SESSION['type'] == '2'){
+    header("Location: driverConsole.php");
+  }elseif($_SESSION['type'] == '3'){
+    header("Location: operatorConsole.php");
+  }elseif($_SESSION['type'] == '4'){
+    header("Location: adminConsole.php");
+  }
+}
+?>
+
 <?php $user = new Users(); ?>
 <!DOCTYPE html>
 <html>
@@ -52,8 +66,6 @@
           }
 
           if(isset($_GET['key']) && $_GET['key']!=""){
-
-            
             $user->getUserByKey($_GET['key']);
             ?>
             <div class="card">
@@ -71,7 +83,7 @@
                     <input type="password" name="password2" id="password2" required class="form-control" placeholder="Re-Enter Password">
                   </div>
                   <div class="form-group">
-                    <input type="text" name="otp" class="form-control" required id="otp" style="<?php if(!isset($_POST['otp'])){ echo 'display: none;'; } ?>" value="<?php if(isset($_POST['otp'])){ echo $_POST['otp']; } ?>">
+                    <input type="text" name="otp" placeholder="Enter OTP Here" class="form-control" required id="otp" style="<?php if(!isset($_POST['otp'])){ echo 'display: none;'; } ?>" value="<?php if(isset($_POST['otp'])){ echo $_POST['otp']; } ?>">
 
                     <?php
                     if(!isset($_POST['otp']) || $_POST['otp']==""){
@@ -88,11 +100,6 @@
               </div>
             </div>
             <?php
-
-            /*echo "<pre>";
-            var_dump($_SESSION);
-            echo "</pre>";*/
-
           }else{
             ?>
             <div class="card">

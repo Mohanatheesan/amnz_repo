@@ -1,3 +1,4 @@
+<?php require "include/setting.php"; ?>
 <!DOCTYPE html>
 <html>
 
@@ -25,12 +26,12 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To Elaxi
+                        Welcome To AMNZ City Taxi
                       </h1>
                       <p class="col-lg-11 px-0">
-                        Quidem, porro ipsam. Voluptatem nihil assumenda consectetur consequatur tempora officia expedita, voluptate vitae beatae possimus sunt ullam vel? Ex dolor corrupti fugit atque.
+                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
-                      <a href="">
+                      <a href="about.php">
                         Read More
                       </a>
                     </div>
@@ -49,12 +50,12 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To Elaxi
+                        Welcome To AMNZ City Taxi
                       </h1>
                       <p class="col-lg-11 px-0">
-                        Quidem, porro ipsam. Voluptatem nihil assumenda consectetur consequatur tempora officia expedita, voluptate vitae beatae possimus sunt ullam vel? Ex dolor corrupti fugit atque.
+                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
-                      <a href="">
+                      <a href="about.php">
                         Read More
                       </a>
                     </div>
@@ -73,12 +74,12 @@
                   <div class="col-md-6">
                     <div class="detail-box">
                       <h1>
-                        Welcome To Elaxi
+                        Welcome To AMNZ City Taxi
                       </h1>
                       <p class="col-lg-11 px-0">
-                        Quidem, porro ipsam. Voluptatem nihil assumenda consectetur consequatur tempora officia expedita, voluptate vitae beatae possimus sunt ullam vel? Ex dolor corrupti fugit atque.
+                        At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
                       </p>
-                      <a href="">
+                      <a href="about.php">
                         Read More
                       </a>
                     </div>
@@ -192,12 +193,9 @@
               </h2>
             </div>
             <p>
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The point
-              of using Lorem Ipsum is that it has a more-or-less normal
-              distribution of letters
+              At City Taxi, we are dedicated to providing a safe, reliable, and convenient transportation solution for our customers. With years of experience in the industry, our mission is to transform the way people travel by offering exceptional service and cutting-edge technology.
             </p>
-            <a href="">
+            <a href="about.php">
               Read More
             </a>
           </div>
@@ -228,7 +226,7 @@
                 <h5>
                   Fast & Easy Booking
                 </h5>
-                <p>
+                <p style="display: none;">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its It is a
                   long established fact that a reader
@@ -245,7 +243,7 @@
                 <h5>
                   Driving safety
                 </h5>
-                <p>
+                <p style="display: none;">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its It is a
                   long established fact that a reader
@@ -262,7 +260,7 @@
                 <h5>
                   Full Satisfaction
                 </h5>
-                <p>
+                <p style="display: none;">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its It is a
                   long established fact that a reader
@@ -279,7 +277,7 @@
 
   <!-- app section -->
 
-  <section class="app_section layout_padding">
+  <section class="app_section layout_padding" style="display: none;">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -314,147 +312,7 @@
     </div>
   </section>
 
-  <!-- end app section -->
-
-  <!-- blog section -->
-
-  <section class="blog_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Latest From Blog
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/b1.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="blog_date">
-                29 July 2020
-              </h6>
-              <h5>
-                Molestiae ad reiciendis dignissimos
-              </h5>
-              <p>
-                Dicta nobis, aperiam fugiat ea, vitae aliquid unde quidem soluta provident enim harum aliquam veniam vel veritatis, voluptates perspiciatis adipisci ullam architecto! Repudiandae id repellat reiciendis dignissimos quasi voluptas!
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <div class="img-box">
-              <img src="images/b2.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <h6 class="blog_date">
-                30 July 2020
-              </h6>
-              <h5>
-                Dolores vel maiores voluptatem enim
-              </h5>
-              <p>
-                Dicta nobis, aperiam fugiat ea, vitae aliquid unde quidem soluta provident enim harum aliquam veniam vel veritatis, voluptates perspiciatis adipisci ullam architecto! Repudiandae id repellat reiciendis dignissimos quasi voluptas!
-              </p>
-              <a href="">
-                Read More
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end blog section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          What Says Our Customers
-        </h2>
-      </div>
-    </div>
-    <div class="container">
-      <div class="col-md-9 mx-auto px-0">
-        <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExample2Controls" data-slide-to="0" class="active">
-              <img src="images/c1.jpg" alt="">
-            </li>
-            <li data-target="#carouselExample2Controls" data-slide-to="1">
-              <img src="images/c2.jpg" alt="">
-            </li>
-            <li data-target="#carouselExample2Controls" data-slide-to="2">
-              <img src="images/c3.jpg" alt="">
-            </li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="detail-box">
-                <h5>
-                  Jane Addams
-                </h5>
-                <h6>
-                  Officia dolom
-                </h6>
-                <p>
-                  <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  Atque itaque deserunt beatae ab! Officia sapiente reiciendis quia amet inventore error dolorem esse nisi asperiores laborum sit odit quae facilis nemo, quo maxime quasi harum officiis, nihil corrupti ab.
-                  Optio omnis officia dolorum voluptatibus nisi praesentium et, fugiat ducimus ea doloribus quam ut architecto temporibus unde vitae, autem accusamus illum esse
-                  <i class="fa fa-quote-right" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h5>
-                  John Cavill
-                </h5>
-                <h6>
-                  Officia dolom
-                </h6>
-                <p>
-                  <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  Atque itaque deserunt beatae ab! Officia sapiente reiciendis quia amet inventore error dolorem esse nisi asperiores laborum sit odit quae facilis nemo, quo maxime quasi harum officiis, nihil corrupti ab.
-                  Optio omnis officia dolorum voluptatibus nisi praesentium et, fugiat ducimus ea doloribus quam ut architecto temporibus unde vitae, autem accusamus illum esse
-                  <i class="fa fa-quote-right" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="detail-box">
-                <h5>
-                  Lisa Joy
-                </h5>
-                <h6>
-                  Officia dolom
-                </h6>
-                <p>
-                  <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  Atque itaque deserunt beatae ab! Officia sapiente reiciendis quia amet inventore error dolorem esse nisi asperiores laborum sit odit quae facilis nemo, quo maxime quasi harum officiis, nihil corrupti ab.
-                  Optio omnis officia dolorum voluptatibus nisi praesentium et, fugiat ducimus ea doloribus quam ut architecto temporibus unde vitae, autem accusamus illum esse
-                  <i class="fa fa-quote-right" aria-hidden="true"></i>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
+  
 
   
 

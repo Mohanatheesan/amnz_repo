@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Elaxi</title>
+  <title>AMNZ City Taxi</title>
 
   <?php include "include/head.php"; ?>
 </head>

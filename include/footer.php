@@ -3,7 +3,7 @@
     <div class="container">
       <div class="info_top ">
         <div class="row ">
-          <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="col-sm-6 col-md-6 col-lg-6">
             <div class="info_detail">
               <a href="index.php">
                 <h4>
@@ -11,7 +11,7 @@
                 </h4>
               </a>
               <p>
-                Soluta odit exercitationem rerum aperiam eos consectetur impedit delectus qui reiciendis, distinctio, asperiores fuga labore a? Magni natus.
+                City Taxi (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. 
               </p>
               <div class="social_box">
                 <a href="">
@@ -29,47 +29,34 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-6 col-md-4 col-lg-3 mx-auto">
+          <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">
             <h4>
               Contact us
             </h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
             </p>
             <div class="contact_nav">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Sri Lanka
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call : +01 123455678990
+                  Call : +94 (76) 7078 650
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  Email : demo@gmail.com
+                  Email : info@amnzcitytaxi.com
                 </span>
               </a>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="info_form">
-              <h4>
-                SIGN UP TO OUR NEWSLETTER
-              </h4>
-              <form action="">
-                <input type="text" placeholder="Enter Your Email" />
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
@@ -80,7 +67,7 @@
     <div class="container">
       <p>
         &copy; <span id="displayYear"></span> All Rights Reserved By
-        <a href="https://html.design/">Free Html Templates</a>
+        <a href="https://html.design/">AMNZ CityTaxi </a>
       </p>
     </div>
   </footer>
