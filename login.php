@@ -71,7 +71,7 @@ if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
             <div class="card">
               <div class="card-header">
                 <p class="text-center text-primary">Welcome back <?php echo $user->lastname; ?></p>
-                <h3 class="text-center">Create Password</h3>
+                <h3 class="text-center"> Create Password</h3>
               </div>
               <div class="card-body">
                 <form action="" method="post">
@@ -88,7 +88,7 @@ if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
                     <?php
                     if(!isset($_POST['otp']) || $_POST['otp']==""){
                       ?>
-                    <button class="btn btn-sm btn-success form-control" id="btnOtp">Send OTP</button>
+                    <button class="btn btn-sm btn-success form-control" id="btnOtp"> Send OTP </button>
                       <?php
                     }
                     ?>

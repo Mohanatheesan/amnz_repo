@@ -48,7 +48,7 @@
               </h2>
             </div>
             <p style="text-align: justify;">
-              City Taxi (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. We pride ourselves on our fleet of well-maintained vehicles and professional drivers who prioritize your safety and satisfaction.
+              City Taxi (PVT) Ltd is a leading taxi service provider based in [Your Location]. Our team is passionate about ensuring every journey is comfortable, efficient, and enjoyable. We pride ourselves on our fleet of well-maintained vehicles and professional drivers who prioritize your Safety and Satisfaction.
             </p>
           </div>
         </div>
