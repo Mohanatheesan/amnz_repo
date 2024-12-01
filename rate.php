@@ -124,7 +124,7 @@
 
             <div class="review-container">
                 <h3>Leave a Review</h3>
-                <textarea class="review-textarea" placeholder="Write your review here..." name="review"></textarea>
+                <textarea class="review-textarea" placeholder="Write your review ..." name="review"></textarea>
                 <button class="submit-btn" type="submit" name="btnRate">Submit</button>
             </div>
 
