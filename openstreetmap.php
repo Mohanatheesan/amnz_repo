@@ -3,7 +3,7 @@
 <html>
 
 <head>
-  <title>Blank</title>
+  <title> Blank </title>
 
   <?php include "include/head.php"; ?>
 

@@ -24,7 +24,7 @@ if(isset($_SESSION['userID']) && $_SESSION['userID']!=""){
 <html>
 
 <head>
-  <title>Welcome to Passenger Console</title>
+  <title> Welcome to Passenger Console </title>
 
   <?php include "include/head.php"; ?>
 </head>
